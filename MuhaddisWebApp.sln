@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuhaddisWebApp", "MuhaddisWebApp\MuhaddisWebApp.csproj", "{7339DFFD-C0A5-48D6-A00E-99B01FDB9561}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuhaddisWebApp", "MuhaddisWebApp\MuhaddisWebApp.csproj", "{7339DFFD-C0A5-48D6-A00E-99B01FDB9561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muhaddis.DataAccess", "Muhaddis_DataAccess\Muhaddis.DataAccess.csproj", "{25DC2A47-4F25-42EC-AABB-FFD00257C8D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muhaddis.Models", "Muhaddis.Models\Muhaddis.Models.csproj", "{5B032A77-70B4-4DE6-99F3-FBA4C92ACFA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7339DFFD-C0A5-48D6-A00E-99B01FDB9561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7339DFFD-C0A5-48D6-A00E-99B01FDB9561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7339DFFD-C0A5-48D6-A00E-99B01FDB9561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DC2A47-4F25-42EC-AABB-FFD00257C8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DC2A47-4F25-42EC-AABB-FFD00257C8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DC2A47-4F25-42EC-AABB-FFD00257C8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DC2A47-4F25-42EC-AABB-FFD00257C8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B032A77-70B4-4DE6-99F3-FBA4C92ACFA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B032A77-70B4-4DE6-99F3-FBA4C92ACFA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B032A77-70B4-4DE6-99F3-FBA4C92ACFA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B032A77-70B4-4DE6-99F3-FBA4C92ACFA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
