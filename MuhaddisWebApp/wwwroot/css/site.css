@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+#headerBanner{
+   
+    background-image:url(../image/banner2.jpg);
+    background-size:auto 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color: #17202f;
+    height:480px !important;
+}
