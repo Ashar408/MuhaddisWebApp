@@ -1,13 +1,15 @@
-﻿@{
+﻿@using Muhaddis.Models.Models
+@model List<BooksConfig>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div dir="rtl" class="" style="background-color:#dbe3f1">
+<div dir="rtl" class="me-0 ms-0" style="background-color:#dbe3f1">
     <h2 class="text-center fw-bold pt-5">آج کی حدیث</h2>
-    <div class="row d-flex justify-content-evenly">
-        <div class="col-md-8 bg-white d-flex border-top border-dark border-4" style="border-radius:5px;">
-        <div class="col-6 col-md-6">
-                <p class="p-2">
+    <div class=" d-flex justify-content-evenly">
+        <div class="col-md-8 bg-white d-flex pb-2 p-2 border-top border-4 border-dark rounded">
+            <div class="col-6 col-md-6">
+                <p class="mt-2">
                     ‌صحيح البخاري: كِتَابُ بَدْءِ الوَحْيِ (بَابٌ: كَيْفَ كَانَ بَدْءُ الوَحْيِ إِلَى رَسُولِ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ)
                     حکم : أحاديث صحيح البخاريّ كلّها صحيحة
 
@@ -15,18 +17,282 @@
                     1   حَدَّثَنَا الحُمَيْدِيُّ عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ، قَالَ: حَدَّثَنَا سُفْيَانُ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ الأَنْصَارِيُّ، قَالَ: أَخْبَرَنِي مُحَمَّدُ بْنُ إِبْرَاهِيمَ التَّيْمِيُّ، أَنَّهُ سَمِعَ عَلْقَمَةَ بْنَ وَقَّاصٍ اللَّيْثِيَّ، يَقُولُ: سَمِعْتُ عُمَرَ بْن....
                 </p>
             </div>
-        <div class="col-6 col-md-6">
+        <div class="col-6 col-md-6" >
            
-                <p class="p-2">
+                <p class="mt-2">
                     صحیح بخاری: کتاب: وحی کے بیان میں (باب: اس بارے میں کہ رسول اللہﷺ پر وحی کی ابتداء کیسے ہوئی)
                     مترجم: ١. شیخ الحدیث حافظ عبد الستار حماد (دار السلام)
 
                     ترجمۃ الباب:اور اللہ عزوجل کا یہ فرمان کہ ’’ہم نے بلاشبہ (اے محمدﷺ!) آپ کی طرف وحی کا نزول اسی طرح کیا ہے جس طرح حضرت نوحؑ اور ان کے بعد آنے والے تمام نبیوں کی طرف کیا تھا۔‘‘
-                    1  حضرت علقمہ بن وقاص لیثی کہتے ہیں کہ میں نے حضرت عمر بن خطاب ؓ کو منبر پر یہ کہتے سنا کہ میں نے رسول اللہ ﷺ سے سنا، آپ فرما رہے تھے: ’’اعمال کا مدار نیتوں پر ہے اور ہر آدمی کو اس کی نیت ہی کے مطابق پھل ملے گا، پھر جس شخص نے دنیا کمانے یا کسی عورت سے شادی رچانے کے لیے وطن چھ
+                   
+                    <br />1  حضرت علقمہ بن وقاص لیثی کہتے ہیں کہ میں نے حضرت عمر بن خطاب ؓ کو منبر پر یہ کہتے سنا کہ میں نے رسول اللہ ﷺ سے سنا، آپ فرما رہے تھے: ’’اعمال کا مدار نیتوں پر ہے اور ہر آدمی کو اس کی نیت ہی کے مطابق پھل ملے گا، پھر جس شخص نے دنیا کمانے یا کسی عورت سے شادی رچانے کے لیے وطن چھ
+                    <br />
+                    <div class=" position-relative pt-4">
+                        <a class="fw-bold fs-6 text-success position-absolute bottom-0  start-0" href="#">مزید تفصیل</a>
+                    </div>
                 </p>
         </div>
-            
+         
         </div>
-        <a class="text-center text-success" href="#">مزید تفصیل</a>
+       
+    </div>
+
+    <div class=" d-flex justify-content-evenly mt-4">
+        <div class="col-md-8 bg-white d-flex pb-4  ps-2 border-start border-4 border-dark rounded" style="border-radius:5px;">
+            <h4 class="fw-bold ">نئی اپڈیٹس</h4>
+        </div>
+    </div> 
+
+    <div class=" d-flex justify-content-center mt-4">
+        <div class="col-md-8 bg-white d-flex pb-4 ps-2 border-start border-4 border-dark rounded">
+            <h4 class="fw-bold ">نئی اپڈیٹس</h4>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<form id="myForm" method="post">
+<div dir="rtl" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">ڈیفالٹ سیٹنگ منتخب کریں</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-3">التراقيم</div>
+                    <div class="col-3">
+                        التراجم
+                    </div>
+                    <div class="col-3">
+
+                        الحکم علی الحدیث
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-3 mt-4 form-group">صحیح بخاری</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SBTarqeem" asp-items="ViewBag.SBTraqeemList" class="form-select">
+                            @* <option disabled selected>--Select Traqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SBTranslation" asp-items="ViewBag.SBTranslateList" class="form-select">
+                            @* <option disabled selected>--Select Trajum--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SBHukam" asp-items="ViewBag.SBHukamList" class="form-select">
+                            @* <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div> <div class="row">
+                        <div class="col-3 mt-4 form-group">صحيح مسلم</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SMTarqeem" asp-items="ViewBag.SMTraqeemList" class="form-select">
+                            @* <option disabled selected>--Select Tarqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SMTranslation" asp-items="ViewBag.SMTranslateList" class="form-select">
+                           @*  <option disabled selected>--Select Translation--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SMHukam" asp-items="ViewBag.SMHukamList" class="form-select">
+                          @*   <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div> <div class="row">
+                        <div class="col-3 mt-4 form-group">سنن أبي داؤد</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SADTarqeem" asp-items="ViewBag.SADTraqeemList" class="form-select">
+                           @*  <option disabled selected>--Select Tarqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SADTranslation" asp-items="ViewBag.SADTranslateList" class="form-select">
+                            @* <option disabled selected>--Select Translation--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SADHukam" asp-items="ViewBag.SADHukamList" class="form-select">
+                           @*  <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div> <div class="row">
+                        <div class="col-3 mt-4 form-group">جامع الترمذي</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="JTTarqeem" asp-items="ViewBag.JTTraqeemList" class="form-select">
+                            @* <option disabled selected>--Select Tarqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="JTTranslation" asp-items="ViewBag.JTTranslateList" class="form-select">
+                            @* <option disabled selected>--Select Translation--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="JTHukam" asp-items="ViewBag.JTHukamList" class="form-select">
+                           @*  <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div> <div class="row">
+                        <div class="col-3 mt-4 form-group">سنن النسائي</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SNTarqeem" asp-items="ViewBag.SNTraqeemList" class="form-select">
+                           @*  <option disabled selected>--Select Tarqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SNTranslation" asp-items="ViewBag.SNTranslateList" class="form-select">
+                           @*  <option disabled selected>--Select Translation--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SNHukam" asp-items="ViewBag.SNHukamList" class="form-select">
+                            @* <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div> <div class="row">
+                        <div class="col-3 mt-4 form-group">سنن ابن ماجه</div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SIMTarqeem" asp-items="ViewBag.SIMTraqeemList" class="form-select">
+                            @* <option disabled selected>--Select Tarqeem--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SIMTranslation" asp-items="ViewBag.SIMTranslateList" class="form-select">
+                          @*   <option disabled selected>--Select Translation--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <div class="col-3">
+                        <label></label>
+                            <select id="SIMHukam" asp-items="ViewBag.SIMHukamList" class="form-select">
+                           @*  <option disabled selected>--Select Hukam--</option> *@
+                        </select>
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div>
+               
+            </div>
+            <div class="modal-footer">
+
+                <button type="submit" class="btn btn-success">ڈیفالٹ سیٹنگ محفوظ کریں</button>
+            </div>
+        </div>
     </div>
 </div>
+ </form>
+
+
+@section scripts {
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Example: Extract data from form fields
+            var formData = {
+                SahiBukhariTarqeem: document.getElementById('SBTarqeem').value,
+                SahiBukhariTranslation: document.getElementById('SBTranslation').value,
+                SahiBukhariHukam: document.getElementById('SBHukam').value,
+                SahiMuslimTarqeem: document.getElementById('SMTarqeem').value,
+                SahiMuslimTranslation: document.getElementById('SMTranslation').value,
+                SahiMuslimHukam: document.getElementById('SMHukam').value,
+                SananAbuDaodTar: document.getElementById('SADTarqeem').value,
+                SananAbuDaodTrans: document.getElementById('SADTranslation').value,
+                SananAbuDaodHukam: document.getElementById('SADHukam').value,
+                JamaTarmeiziTar: document.getElementById('JTTarqeem').value,
+                JamaTarmeiziTrans: document.getElementById('JTTranslation').value,
+                JamaTarmeiziHukam: document.getElementById('JTHukam').value,
+                SunanNisaiTarqeem: document.getElementById('SNTarqeem').value,
+                SunanNisaiTranslation: document.getElementById('SNTranslation').value,
+                SunanNisaiHukam: document.getElementById('SNHukam').value,
+                SunanIbeMajaTarqeem: document.getElementById('SIMTarqeem').value,
+                SunanIbeMajaTranslation: document.getElementById('SIMTranslation').value,
+                SunanIbeMajaHukam: document.getElementById('SIMHukam').value
+                // Add more fields as needed
+            };
+
+            // Store data in localStorage
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // Submit the form (optional, if you want to submit the form after storing data)
+            this.submit();
+        });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
