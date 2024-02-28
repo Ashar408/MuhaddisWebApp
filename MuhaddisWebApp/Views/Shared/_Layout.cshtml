@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MuhaddisWebApp.styles.css" asp-append-version="true" />
 </head>
-<body class="p-0 m-0">
+<body class="m-0">
     <header id="headerBanner" class="border-bottom border-success border-4">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom border-success border-4 box-shadow">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom border-success border-4 box-shadow">
                 <div class="container-fluid ">
                 @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">محدث</a> *@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -25,22 +25,22 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="navbar-nav mx-auto ">
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Index">رابطہ کریں</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">رابطہ کریں</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Index">تعاون</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">تعاون</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Index">استعمال کرنے کا طریقہ</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">استعمال کرنے کا طریقہ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Index">کچھ ہمارے بارے میں</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">کچھ ہمارے بارے میں</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Index">خصوصیات</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">خصوصیات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-5" asp-area="" asp-controller="Home" asp-action="Privacy">صفحہ اول</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Privacy">صفحہ اول</a>
                         </li>
                     </ul>
                 </div>
@@ -53,20 +53,20 @@
             <img class="img-fluid" src="./image/banner1.png"/>
         </div>
     </header>
-    <div class="container-fluid p-0">
+    <div class="container-fluid ps-0 pe-0">
         <main role="main" class="">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted mt-4 bg-white">
         <div class="container-fluid">
             &copy; 2024 - MuhaddisWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -41,6 +41,8 @@ namespace Muhaddis.DataAccess.Data
                         bookConfig.Id = Convert.ToInt64(rdr["Id"]);
                         bookConfig.Type = rdr["Type"].ToString();
                         bookConfig.Name = rdr["Name"].ToString();
+                        bookConfig.Value = rdr["Value"].ToString();
+                        bookConfig.UrduSrNo = rdr["UrduSrNo"].ToString();
                         bookConfig.BookID = Convert.ToInt64(rdr["BookID"]);
                         bookConfig.BookName = rdr["BookName"].ToString();
 
@@ -53,6 +55,10 @@ namespace Muhaddis.DataAccess.Data
             catch(Exception ex)
             {
                 throw;
+            }
+            finally
+            {
+                con.Close();
             }
         }
 

@@ -4,11 +4,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div dir="rtl" class="me-0 ms-0" style="background-color:#dbe3f1">
+@* <div dir="rtl" class="" style="background-color:#dbe3f1">
     <h2 class="text-center fw-bold pt-5">آج کی حدیث</h2>
-    <div class=" d-flex justify-content-evenly">
-        <div class="col-md-8 bg-white d-flex pb-2 p-2 border-top border-4 border-dark rounded">
-            <div class="col-6 col-md-6">
+    <div class=" row  me-auto ms-auto">
+        <div class="col-md-10 offset-md-1 d-flex justify-content-evenly bg-white pb-2 border-top border-1 border-dark rounded">
+            <div class="col-lg-6 col-md-6 col-xsm-10">
                 <p class="mt-2">
                     ‌صحيح البخاري: كِتَابُ بَدْءِ الوَحْيِ (بَابٌ: كَيْفَ كَانَ بَدْءُ الوَحْيِ إِلَى رَسُولِ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ)
                     حکم : أحاديث صحيح البخاريّ كلّها صحيحة
@@ -17,7 +17,7 @@
                     1   حَدَّثَنَا الحُمَيْدِيُّ عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ، قَالَ: حَدَّثَنَا سُفْيَانُ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ الأَنْصَارِيُّ، قَالَ: أَخْبَرَنِي مُحَمَّدُ بْنُ إِبْرَاهِيمَ التَّيْمِيُّ، أَنَّهُ سَمِعَ عَلْقَمَةَ بْنَ وَقَّاصٍ اللَّيْثِيَّ، يَقُولُ: سَمِعْتُ عُمَرَ بْن....
                 </p>
             </div>
-        <div class="col-6 col-md-6" >
+        <div class="col-lg-6 col-md-6 col-xsm-10" >
            
                 <p class="mt-2">
                     صحیح بخاری: کتاب: وحی کے بیان میں (باب: اس بارے میں کہ رسول اللہﷺ پر وحی کی ابتداء کیسے ہوئی)
@@ -37,19 +37,19 @@
        
     </div>
 
-    <div class=" d-flex justify-content-evenly mt-4">
-        <div class="col-md-8 bg-white d-flex pb-4  ps-2 border-start border-4 border-dark rounded" style="border-radius:5px;">
+    <div class="row mt-4 me-auto ms-auto">
+        <div class="col-md-10 offset-md-1 bg-white pb-4  ps-2 border-start border-4 border-dark rounded">
             <h4 class="fw-bold ">نئی اپڈیٹس</h4>
         </div>
     </div> 
 
-    <div class=" d-flex justify-content-center mt-4">
-        <div class="col-md-8 bg-white d-flex pb-4 ps-2 border-start border-4 border-dark rounded">
+    <div class=" row mt-4  me-auto ms-auto">
+        <div class="col-md-10 offset-md-1 bg-white pb-4 ps-2 border-start border-4 border-dark rounded">
             <h4 class="fw-bold ">نئی اپڈیٹس</h4>
         </div>
     </div>
 
-</div>
+</div> *@
 
 
 
@@ -58,12 +58,12 @@
 
 <!-- Modal -->
 <form id="myForm" method="post">
-<div dir="rtl" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div dir="rtl" class="modal fade right" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">ڈیفالٹ سیٹنگ منتخب کریں</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -82,7 +82,7 @@
                     <div class="col-3 mt-4 form-group">صحیح بخاری</div>
                     <div class="col-3">
                         <label></label>
-                            <select id="SBTarqeem" asp-items="ViewBag.SBTraqeemList" class="form-select">
+                            <select id="SBTarqeem" name="BookName" name="Value" asp-items="ViewBag.SBTraqeemList" class="form-select">
                             @* <option disabled selected>--Select Traqeem--</option> *@
                         </select>
                         <span class="text-danger"></span>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-3">
                         <label></label>
-                            <select id="SBTranslation" asp-items="ViewBag.SBTranslateList" class="form-select">
+                            <select id="SBTranslation" name="Value" asp-items="ViewBag.SBTranslateList" class="form-select">
                             @* <option disabled selected>--Select Trajum--</option> *@
                         </select>
                         <span class="text-danger"></span>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="col-3">
                         <label></label>
-                            <select id="SBHukam" asp-items="ViewBag.SBHukamList" class="form-select">
+                            <select id="SBHukam" name="Value" asp-items="ViewBag.SBHukamList" class="form-select">
                             @* <option disabled selected>--Select Hukam--</option> *@
                         </select>
                         <span class="text-danger"></span>
@@ -263,11 +263,11 @@
                 SahiMuslimTarqeem: document.getElementById('SMTarqeem').value,
                 SahiMuslimTranslation: document.getElementById('SMTranslation').value,
                 SahiMuslimHukam: document.getElementById('SMHukam').value,
-                SananAbuDaodTar: document.getElementById('SADTarqeem').value,
-                SananAbuDaodTrans: document.getElementById('SADTranslation').value,
+                SananAbuDaodTarqeem: document.getElementById('SADTarqeem').value,
+                SananAbuDaodTranslation: document.getElementById('SADTranslation').value,
                 SananAbuDaodHukam: document.getElementById('SADHukam').value,
-                JamaTarmeiziTar: document.getElementById('JTTarqeem').value,
-                JamaTarmeiziTrans: document.getElementById('JTTranslation').value,
+                JamaTarmeiziTarqeem: document.getElementById('JTTarqeem').value,
+                JamaTarmeiziTranslation: document.getElementById('JTTranslation').value,
                 JamaTarmeiziHukam: document.getElementById('JTHukam').value,
                 SunanNisaiTarqeem: document.getElementById('SNTarqeem').value,
                 SunanNisaiTranslation: document.getElementById('SNTranslation').value,
@@ -275,15 +275,29 @@
                 SunanIbeMajaTarqeem: document.getElementById('SIMTarqeem').value,
                 SunanIbeMajaTranslation: document.getElementById('SIMTranslation').value,
                 SunanIbeMajaHukam: document.getElementById('SIMHukam').value
-                // Add more fields as needed
             };
 
-            // Store data in localStorage
-            localStorage.setItem('formData', JSON.stringify(formData));
+            // Loop through formData and set each field as a separate cookie
+            for (var key in formData) {
+                if (formData.hasOwnProperty(key)) {
+                    setCookie(key, formData[key]); // Set the cookie with a 100-year expiration
+                }
+            }
 
-            // Submit the form (optional, if you want to submit the form after storing data)
-            this.submit();
+            // Optionally, you can redirect to another page after setting the cookies
+            //window.location.href = "https://localhost:44367/";
         });
+
+        function setCookie(name, value) {
+            var expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 100); // Expires in 100 years
+            var expires = "expires=" + expirationDate.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            console.log(expires);
+        }
+
+
+
     </script>
 }
 

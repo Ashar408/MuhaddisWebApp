@@ -25,7 +25,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SBTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(1) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo +"--"+ u.Name,
                    Value = u.Value
 
                }
@@ -34,7 +34,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SBTranslateList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(1) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo +"--"+ u.Name,
                    Value = u.Value
                }
                );
@@ -42,7 +42,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SBHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(1) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
 
                }
@@ -52,7 +52,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SMTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(2) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
 
                }
@@ -61,16 +61,16 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SMTranslateList = _applicationDbContext.GetBookConfig().Where(item=>!string.IsNullOrEmpty(item.Name) && item.BookID.Equals(2) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
-                   Value = u.Value  
+                   Text = u.UrduSrNo + "--" + u.Name,
+                   Value = u.Value
                }
                );
             ViewBag.SMTranslateList = SMTranslateList;
             IEnumerable<SelectListItem> SMHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(2) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
-                   Value =  u.Value
+                   Text = u.UrduSrNo + "--" + u.Name,
+                   Value = u.Value
                }
                );
             ViewBag.SMHukamList = SMHukamList;
@@ -78,7 +78,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SADTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(3) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
 
                }
@@ -87,7 +87,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SADTranslateList = _applicationDbContext.GetBookConfig().Where(item=>!string.IsNullOrEmpty(item.Name) && item.BookID.Equals(3) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -95,8 +95,8 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SADHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(3) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
-                   Value = u.Value
+                   Text = u.UrduSrNo + "--" + u.Name,
+                   Value = u.Value     
                }
                );
             ViewBag.SADHukamList = SADHukamList;
@@ -104,8 +104,8 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> JTTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(4) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
-                   Value = u.Value  
+                   Text = u.UrduSrNo + "--" + u.Name,
+                   Value = u.Value
 
                }
                );
@@ -113,7 +113,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> JTTranslateList = _applicationDbContext.GetBookConfig().Where(item=>!string.IsNullOrEmpty(item.Name) && item.BookID.Equals(4) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -121,7 +121,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> JTHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(4) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -130,7 +130,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SNTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(5) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
 
                }
@@ -139,7 +139,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SNTranslateList = _applicationDbContext.GetBookConfig().Where(item=>!string.IsNullOrEmpty(item.Name) && item.BookID.Equals(5) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -147,7 +147,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SNHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(5) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -156,7 +156,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SIMTraqeemList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(6) && item.Type.Contains("Tarqeem")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
 
                }
@@ -165,7 +165,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SIMTranslateList = _applicationDbContext.GetBookConfig().Where(item=>!string.IsNullOrEmpty(item.Name) && item.BookID.Equals(6) && item.Type.Contains("Translation")).Select(
                u => new SelectListItem
                {
-                   Text = u.UrduSrNo + u.Name,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -173,7 +173,7 @@ namespace MuhaddisWebApp.Controllers
             IEnumerable<SelectListItem> SIMHukamList = _applicationDbContext.GetBookConfig().Where(item => !string.IsNullOrEmpty(item.Name) && item.BookID.Equals(6) && item.Type.Contains("Hukam")).Select(
                u => new SelectListItem
                {
-                   Text = u.Name + u.Value,
+                   Text = u.UrduSrNo + "--" + u.Name,
                    Value = u.Value
                }
                );
@@ -184,13 +184,8 @@ namespace MuhaddisWebApp.Controllers
             return View(booksConfigs);
         }
 
-        [HttpPost]
-        public IActionResult Index(BooksConfig booksConfig)
-        { 
-            return View();
-        }
 
-            public IActionResult Privacy()
+        public IActionResult Privacy()
         {
             return View();
         }
