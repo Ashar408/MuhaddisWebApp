@@ -1,5 +1,36 @@
+/*// <uniquifier > : Use a unique and descriptive class name
+// <weight > : Use a value from 400 to 700*/
+
+
+
+
+@font-face {
+    font-family: 'KFGQPC Uthman Taha Naskh';
+    src: url('../fonts/KFGQPC Uthman Taha Naskh.woff2') format('woff2'), url('../fonts/KFGQPC Uthman Taha Naskh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: mehr;
+    src: url('../fonts/Mehr_Nastaliq_Web v. 2.0.ttf');
+    src: url('../fonts/Mehr_Nastaliq_Web v.2.0.woff') format('woff');
+    font-weight: normal;
+}
+.arabic-font {
+    font-family: 'KFGQPC Uthman Taha Naskh' !important;
+    letter-spacing: 0px !important;
+}
+
+.eng-font {
+    font-family: Arial sans-serif !important;
+    direction: ltr !important;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+   
+    /*font-family: "mehr";*/
 }
 
 @media (min-width: 768px) {
@@ -8,7 +39,7 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus /*.form-check-input:focus*/ {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -18,7 +49,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    font-family: "mehr", Arial, sans-serif;
 }
 #headerBanner{
    
@@ -27,5 +59,353 @@ body {
     background-position:center;
     background-repeat:no-repeat;
     background-color: #17202f;
-    height:320px !important;
+    height:390px !important;
+}
+
+
+
+/*footer CSS STyling*/
+.standard-footer-heading {
+    font-size: 36px;
+    line-height: 51px;
+    color: #0a993c;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-list {
+    padding: 0px;
+    list-style: none;
+}
+
+    .footer-list li {
+        font-size: 18px;
+        line-height: 34px;
+        color: #000;
+        margin-top: 9px;
+    }
+
+    .footer-list .footer-link {
+        color: #000;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+    }
+
+        .footer-list .footer-link:hover {
+            color: #0a993c;
+        }
+
+li.footer-social-icons a {
+    color: #000;
+    margin-left: 10px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .project-list li {
+        flex: 0 0 33%;
+    }
+
+@media (max-width: 767px) {
+    .project-list li {
+        flex: 0 0 100%;
+    }
+}
+.article-padd-half {
+    padding: 30px 0 30px 0;
+}
+.single-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 15px;
+    box-shadow: 0px 5px 16px -1px #00000030;
+}
+
+.visits-wrap {
+    background-image: url(../image/visit-bg.png);
+    background-size: 100% auto;
+    height: 150px;
+    width: 80%;
+    /*background-repeat: no-repeat;*/
+    background-position: center center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.visit-txt p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.list-action:hover {
+    background-color: #0a993c; /* Change this to the desired hover color */
+    color: white; /* Change this to the desired text color on hover */
+}
+.list:hover {
+    background-color: #0a993c;
+    color:white !important;
+}
+
+/*Detail Pages*/
+
+.side-lang, .book-selection {
+    background-color: #fff;
+    padding: 10px 10px;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+    .side-lang .lang-drop, .book-selection .lang-drop {
+        background: url(../image/caret-down.png) no-repeat scroll 7% 16px;
+        padding: 0 15px;
+    }
+    .shadow {
+        box-shadow: 0 5px 16px -1px #00000030;
+    }
+.tarqeem_ddl {
+    line-height: 2;
+}
+.btn-box a {
+    background-image: url(../image/green-small.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    width: 130px;
+    height: 41px;
+    display: flex;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+}
+
+.btn-box input[type="button"] {
+    background-image: url(../image/green-small.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    width: 130px;
+    height: 41px;
+    display: flex;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="button"] {
+    border: none;
+}
+
+.btn-box .active {
+    background-image: url(../image/blue-small.png);
+}
+
+.btn-box {
+    display: flex;
+}
+
+.check-wrap ul {
+    display: flex;
+    margin-bottom: 0;
+}
+.filter-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+/*Detail Pages*/
+
+ /*   Neww Header HOMEPAGE CSS*/
+.lang-drop {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    float: left;
+    background: url(../image/caret-down.png) no-repeat scroll 97% 28px;
+    background-color: #fff;
+    padding: 0 35px;
+    cursor: pointer;
+}
+
+
+.search-wrap .first-wrap {
+    background-position: 93% 28px;
+}
+
+.search-wrap {
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+    position:inherit;
+}
+
+.search-search-wrap{
+    height: calc(100% - 150px) !important;
+}
+
+.search-wrap-home {
+    height: calc(100% - 100px) !important;
+}
+
+.search-wrap form {
+    width: 100%;
+    margin: -90px auto 0 auto;
+    background-color: #ffffff1a;
+    padding: 20px 40px 20px 35px;
+    border-radius: 5px;
+}
+
+.search-wrap .rowform {
+    width: 100%;
+    margin: -90px auto 0 auto;
+    background-color: #ffffff1a;
+    padding: 20px 49px 20px 35px;
+    border-radius: 5px;
+}
+
+.search-wrap form .col-md-4, .search-wrap form .col-md-2, .search-wrap form .col-md-5, .search-wrap form .col-md-1 {
+    padding: 0;
+
+}
+.search-wrap .rowform .col-md-4, .search-wrap .rowform .col-md-2, .search-wrap .rowform .col-md-5, .search-wrap .rowform .col-md-1 {
+    padding: 0;
+}
+.search-wrap .form-control {
+    border-radius: 0;
+    height: 64px !important;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    line-height:2;
+}
+
+.search-wrap .first-wrap {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+}
+
+.search-wrap .form-group {
+    margin-bottom: 0;
+    
+}
+
+.search-wrap input {
+    padding: 10px 10px 10px 10px;
+    border-right: 0;
+}
+
+.search-wrap .keyboard-wrap {
+    position: relative;
+}
+
+.search-wrap .keyboard-wrap img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.search-wrap input::placeholder {
+    color: #000;
+}
+
+.search-wrap button {
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    float: right;
+    margin-right: -1px;
+}
+.search-wrap input[type="image"] {
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5.5px;
+    background-color: #fff;
+    float: right;
+    margin-right: -1px;
+}
+.search-wrap button img {
+    width: 57px !important;
+}
+
+.search-wrap button p {
+    display: none;
+}
+
+.btnSearch {
+    background-image: url(../image/search.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #fff0;
+    color: transparent;
+    width: 80px;
+    padding: 0 !important;
+    margin: 0 auto;
+    height: 64px;
+    background-size: cover;
+    cursor: pointer;
+}
+@media all and (max-width: 992px) {
+    .search-wrap {
+        height: calc(100%);
+    }
+
+    .search-search-wrap {
+        height: calc(100% - 140px) !important;
+    }
+
+
+    .search-wrap form {
+        width: 100%;
+        padding: 20px 25px 20px 25px;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 768px) {
+    .search-wrap {
+        margin-top:59px;
+        margin-bottom:-21px;
+        
+        
+    }
+    .search-wrap {
+        height: calc(100%) !important;
+    }
+
+    .search-search-wrap {
+        height: calc(100% ) !important;
+    }
+
+    .search-wrap form {
+        background-color: #ffffff1a;
+    }
+
+    .search-wrap .form-control {
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .search-wrap .first-wrap {
+        background-position: 87% 28px;
+    }
 }

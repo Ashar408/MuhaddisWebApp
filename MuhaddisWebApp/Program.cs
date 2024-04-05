@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+
 using Muhaddis.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +8,11 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
 //    builder.Configuration.GetConnectionString("DefaultConnection")
 //    ));
-builder.Services.AddSingleton<IApplicationDbContext, ApplicationDbContext>();
+builder.Services.AddSingleton<BookConfigDbContext, BookConfigDbContext>();
+builder.Services.AddSingleton<DefaultHadithDBContext, DefaultHadithDBContext>();
+builder.Services.AddSingleton<UpdateImageDbContext, UpdateImageDbContext>();
+builder.Services.AddSingleton<AnalyticsDbContext, AnalyticsDbContext>();
+builder.Services.AddSingleton<LoadHadithByHadithNoDBContext, LoadHadithByHadithNoDBContext>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var app = builder.Build();
 

@@ -1,0 +1,431 @@
+﻿@model Muhaddis.Models.Models.ViewModels.HomeVM
+<section class="mb-4" dir="rtl">
+<div class="row mt-2 justify-content-center p-0 m-0 " >
+    <div class="col-md-2">
+            <div class="row mt-2 pt-3 pb-4 me-1 bg-white">
+            <div class="form-group">
+                    <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-select">
+                <option value="1">اردو</option>
+                <option value="2">عربی</option>
+                <option value="3">English</option>
+
+            </select>
+
+        </div>
+            </div>
+            <div class="row mt-2 pt-3 pb-3 me-1 bg-white">
+
+            <div class="form-group">
+                    <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-select">
+                        <option selected="selected" value="1">صحیح بخاری</option>
+                        <option value="2">صحیح مسلم</option>
+                        <option value="3">سنن ابو داؤد</option>
+                        <option value="4">جامع ترمذی</option>
+                        <option value="5">سنن نسائی</option>
+                        <option value="6">سنن ابن ماجہ</option>
+
+            </select>
+            </div>
+
+                <div class="form-group mt-1">
+                    <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-select">
+                        <option value="1">اردو</option>
+                        <option value="2">عربی</option>
+                        <option value="3">English</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group mt-1">
+                    <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-select">
+                        <option value="1">اردو</option>
+                        <option value="2">عربی</option>
+                        <option value="3">English</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row me-1 mt-3 bg-white">
+                <h4 class="bg-dark text-white p-2 rounded-3">موضوعات</h4>
+                <div class="">
+                    شجرۂ موضوعات
+                </div>
+            </div>
+
+    </div>
+
+     <div class="col-md-9">
+            <div class="row mt-2 pt-3 pb-3 bg-white">
+
+                <div class="col-md-6 col-12 align-self-center">
+
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label arabic-font" for="inlineCheckbox3">تشریح</label>
+                        <input class="form-check-input mt-3" type="checkbox" id="inlineCheckbox3" value="option3">
+                    </div>
+               
+                <div class="form-check form-check-inline">
+                        <label class="form-check-label arabic-font" for="inlineCheckbox2">الحکم التفصیلی</label>
+                        <input class="form-check-input mt-3" type="checkbox" id="inlineCheckbox2" value="option2">
+                </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label arabic-font" for="inlineCheckbox1">الموضوع</label>
+                        <input class="form-check-input mt-3" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+               
+           </div>
+
+                <div class="col-md-6 col-12 btn-box">
+                    <input data-bs-toggle="modal" data-bs-target="#ModalTrajum" type="button" class="arabic-font" value="التراجم" />
+                    <input type="button" class="arabic-font" value="الحکم علی الحدیث" />
+                    <a class="arabic-font">التخريج</a>
+
+                </div>
+
+       </div>
+
+
+            <div class="row mt-2 pt-3 pb-2 bg-white">
+
+                <div class="col-md-3 col-12">
+                    <div class="btn-group">
+                        <button class="btn btn-light btn-sm" type="button">
+                            Hadees Number
+                        </button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>1</li>
+                          <li>2</li>
+                          <li>3</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-12">
+                    <div class="form-group mt-1">
+                        <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-select">
+                            <option value="1">اردو</option>
+                            <option value="2">عربی</option>
+                            <option value="3">English</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1  col-12">
+                    <button class="btn btn-dark">التراقيم</button>
+                </div>
+
+                <div class="col-md-4 col-12">
+                    <span class="fw-bold">قسم الحديث (القائل)</span>:<span>مرفوع </span>، 
+                    <span class="fw-bold">اتصال السند</span>:<span>مرفوع </span>، 
+                    <span class="fw-bold">قسم الحديث</span>:<span>مرفوع </span>،
+                </div>
+
+            </div>
+            @foreach (var obj in Model.GetDefaultHadithByHadithNo)
+            {
+            <p id="bookId" hidden>@obj.BookID</p>
+            <p id="hadithNo" hidden>@obj.HadeesNumber</p>
+                <h1 id="kitaabUrdu" hidden>@obj.kitaabNameUrdu</h1>
+                <h1 id="baabUrdu" hidden>@obj.BaabNameUrdu</h1>
+            <div class="row bg-light mt-2">
+                <div class="col-md-6 col-sm-10 mt-2">
+                    <span class="text-success">@obj.HadithBookName:</span> <span class="text-danger arabic-font"> @obj.kitaabNameArabic</span> <span class="arabic-font"> ( : @obj.BaabNameArabic )</span> <br />
+                    <div class="d-flex flex-inline mt-2"><span class="text-success">حکم : </span> <p class="arabic-font text-success" id="hukamm">@* .HadithHukamAjmali *@ </p></div>
+                        @if (!string.IsNullOrEmpty(obj.TarjumatulBaabArabic))
+                        {
+                            <div class="d-flex flex-inline mt-2">
+                                <span class="text-success">ترجمة الباب</span>: <p class="arabic-font">@obj.TarjumatulBaabArabic</p>
+                            </div>
+                        }
+                    <div class="d-flex flex-inline mt-2">
+                        <span class="text-danger">@obj.HadeesNumber</span>: <p class="arabic-font">@obj.HadithArabicText</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-10 mt-2">
+                        <div class=" d-flex flex-inline">
+                            <span class="text-success">@obj.HadithBookNameUrdu</span>:<span class="text-danger" id="kitaabNameUrdu"></span>(<span id="BaabNameUrdu"></span>)
+                        </div>
+                    <div class="d-flex flex-inline">
+                        <span class="text-success">مترجم : </span> <p class="mutarajjum" id="mutarajam"> </p>
+                    </div>
+                        <div class=" d-flex flex-inline mt-2">
+                            <span class="text-success"> ترجمۃ الباب</span>:<p id="HadithTarjuma"></p>
+                        </div>
+                    @* <span class="text-success">ترجمۃ الباب: :</span> <p class="">.TarjumatulBaabUrdu </p> <p class="text-center" dir="ltr" id="HadithTransUE"> .HadithUrduText </p>*@
+                    <div class=" d-flex flex-inline mt-2">
+                            <span class="text-danger">@obj.HadeesNumber</span>:<div class="text-center" dir="ltr" id="HadithTransUE"></div>
+                    </div>
+                </div>
+            </div>
+                <div class="row bg-light mt-2">
+                    <div class="col-md-12 col-12">
+                        <h4 class="text-success pt-2">تشریح:</h4>
+                        <hr class="text-success" />
+                        <div id="Hashiaa"></div>
+                    </div>
+                </div> 
+
+                <div class="row bg-light mt-2">
+                    <div class="col-md-12 col-12">
+                        <h5 class="text-success pt-3">الحکم التفصیلی:</h5>
+                        <hr class="text-success" />
+                       
+                        <div>@obj.HadithHukamTafseeli</div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-evenly mt-2">
+                    <div class="col-md-5 mt-2 bg-white">
+                    <h4 class="bg-dark text-white mt-2 p-2 rounded-3">المواضيع </h4>
+                    <div class="">
+                        شجرۂ موضوعات
+                    </div>
+                    </div>
+                   
+                    <div class="col-md-5 mt-2 bg-white">
+                        <h4 class="bg-dark text-white p-2 mt-2 rounded-3">موضوعات</h4>
+                        <div class="">
+                            شجرۂ موضوعات
+                        </div>
+                    </div>
+                </div>
+            }
+           
+
+    </div>
+    
+</div>
+
+
+
+</section>
+
+
+
+
+
+@section scripts {
+    @{
+      <partial name="_ValidationScriptsPartial"></partial>
+    }
+<script>
+        // JavaScript/jQuery
+        $(document).ready(function () {
+            $('.nav-tabs a').on('click', function (e) {
+                e.preventDefault();
+                var tabValue = document.getElementById('tabss').value;
+                 loadTabContent(tabValue);
+                
+            });
+
+            function loadTabContent(tabValue) {
+                var bookID = document.getElementById('bookId').innerText;
+                // Set Huakam and Translation based on bookID
+                if (bookID === '1') {
+                    var value = getCookie('SahiBukhariTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('SahiBukhariHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('SahiBukhariTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('SahiBukhariTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('SahiBukhariHashiya') || 'HadithHashiaText';
+                } else if (bookID === '2') {
+                    var value = getCookie('SahiMuslimTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('SahiMuslimHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('SahiMuslimTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('SahiMuslimTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('SahiMuslimHashiya') || 'HadithHashiaText';
+                } else if (bookID === '3') {
+                    var value = getCookie('SananAbuDaodTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('SananAbuDaodHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('SananAbuDaodTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('SananAbuDaodTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('SananAbuDaodHashiya') || 'HadithHashiaText';
+                } else if (bookID === '4') {
+                    var value = getCookie('JamaTarmeiziTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('JamaTarmeiziHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('JamaTarmeiziTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('JamaTarmeiziTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('JamaTarmeiziHashiya') || 'HadithHashiaText';
+                } else if (bookID === '5') {
+                    var value = getCookie('SunanNisaiTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('SunanNisaiHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('SunanNisaiTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('SunanNisaiTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('SunanNisaiHashiya') || 'HadithHashiaText';
+                } else if (bookID === '6') {
+                    var value = getCookie('SunanIbeMajaTranslation') || 'HadithUrduText';
+                    var Huakam = getCookie('SunanIbeMajaHukam') || 'HadithHukamAjmali';
+                    var Tarjuma = getCookie('SunanIbneMajaTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                    var Tarqeem = getCookie('SunanIbeMajaTarqeem') || 'HadeesNumber';
+                    var Hashia = getCookie('SunanIbneMajaHashiya') || 'HadithHashiaText';
+                }
+
+                // You can use Ajax to load content based on tabValue
+                // For example:
+                console.log(bookID);
+                $.ajax({
+                    url: '/Home/YourAction',
+                    type: 'GET',
+                    data: { 
+                        tabValue: tabValue,
+                        Tarjuma: Tarjuma,
+                        Hashia: Hashia
+                    },
+                    success: function (data) {
+                        $('#tabContent').html(data);
+                    },
+                    error: function () {
+                        $('#tabContent').html('Error loading content.');
+                    }
+                });
+            }
+        });
+
+
+
+        $(document).ready(function () {
+            // Read the value of the "myCookie" cookie
+
+            var bookID = document.getElementById('bookId').innerText;
+            var HadithNo = document.getElementById('hadithNo').innerText;
+            var kitaabUrdu = document.getElementById('kitaabUrdu').innerText;
+            var baabUrdu = document.getElementById('baabUrdu').innerText;
+
+            console.log(bookID);
+
+            // Set Huakam and value based on bookID
+            if (bookID === '1') {
+                var value = getCookie('SahiBukhariTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SahiBukhariHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SahiBukhariTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('SahiBukhariTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('SahiBukhariHashiya') || 'HadithHashiaText';
+            } else if (bookID === '2') {
+                var value = getCookie('SahiMuslimTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SahiMuslimHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SahiMuslimTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('SahiMuslimTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('SahiMuslimHashiya') || 'HadithHashiaText';
+            } else if (bookID === '3') {
+                var value = getCookie('SananAbuDaodTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SananAbuDaodHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SananAbuDaodTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('SananAbuDaodTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('SananAbuDaodHashiya') || 'HadithHashiaText';
+            } else if (bookID === '4') {
+                var value = getCookie('JamaTarmeiziTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('JamaTarmeiziHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('JamaTarmeiziTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('JamaTarmeiziTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('JamaTarmeiziHashiya') || 'HadithHashiaText';
+            } else if (bookID === '5') {
+                var value = getCookie('SunanNisaiTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SunanNisaiHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SunanNisaiTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('SunanNisaiTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('SunanNisaiHashiya') || 'HadithHashiaText';
+            } else if (bookID === '6') {
+                var value = getCookie('SunanIbeMajaTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SunanIbeMajaHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SunanIbneMajaTarjumaUrdu') || 'TarjumatulBaabUrdu';
+                var Tarqeem = getCookie('SunanIbeMajaTarqeem') || 'HadeesNumber';
+                var Hashia = getCookie('SunanIbneMajaHashiya') || 'HadithHashiaText';
+            }
+
+            // Send an AJAX request to your server to get the corresponding "Name" based on the "Value" from the cookie
+            $.ajax({
+                url: '/Home/GetDetailResponse',
+                type: 'GET',
+                data: {
+                    Translation: value,
+                    Tarqeem: Tarqeem,
+                    hukam: Huakam,
+                    BookId: bookID,
+                    HadithNo: HadithNo,
+                    KitaabUrdu: kitaabUrdu,
+                    BaabUrdu: baabUrdu,
+                    Hashia: Hashia,
+                    Tarjuma: Tarjuma
+                },
+                success: function (response) {
+                    // Display the "Name" in a <p> tag with the id "name"
+
+                    $("#mutarajam").text(response.name);
+                    $("#HadithTarjuma").html(response.details[camelCase(response.tarjuma)]);
+                    $("#hukamm").text(response.details[camelCase(response.hukam)]);
+                    $("#HadithTransUE").html(response.details[camelCase(response.translation)]);
+                    $("#Hashiaa").html(response.details[camelCase(response.hashia)]);
+                    $("#kitaabNameUrdu").html(response.kitaabUrdu);
+                    $("#BaabNameUrdu").html(response.baabUrdu);
+
+
+                    // $("#HadithTarjuma").html(response.bookId[camelCase(response.tarjuma)]);
+
+                    
+
+                    console.log(response);
+                },
+                error: function () {
+                    // Handle errors
+                }
+            });
+        });
+
+        function getCookie(name) {
+            var cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return cookieValue ? cookieValue.pop() : '';
+
+        }
+
+
+        function camelCase(str) {
+            // Using replace method with regEx
+            return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+                return index == 0 ? word.toLowerCase() : word.toUpperCase();
+            }).replace(/\s+/g, '');
+        }
+
+</script>
+
+
+}
+
+
+
+
+<!-- Modal -->
+<div dir="rtl" class="modal fade" id="ModalTrajum" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="staticBackdropLabel">تراجم الحديث المذكور المختلفة</h4>
+                <h4 class="modal-title mx-auto" id="staticBackdropLabel">
+                    موجودہ حدیث کے دیگر تراجم
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    @foreach (var item in ViewBag.SBTranslateList)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary active" id="tabss" value="@item.Value" aria-current="page" href="#">@item.Text</a>
+                        </li>
+                        
+                    }
+                   
+                </ul>
+                <div id="tabContent"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>

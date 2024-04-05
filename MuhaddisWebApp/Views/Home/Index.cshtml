@@ -1,300 +1,346 @@
-﻿@using Muhaddis.Models.Models
-@model List<BooksConfig>
+﻿@* @using Muhaddis.Models.Models *@
+@model Muhaddis.Models.Models.ViewModels.HomeVM
+
 @{
     ViewData["Title"] = "Home Page";
+
 }
 
-@* <div dir="rtl" class="" style="background-color:#dbe3f1">
-    <h2 class="text-center fw-bold pt-5">آج کی حدیث</h2>
-    <div class=" row  me-auto ms-auto">
-        <div class="col-md-10 offset-md-1 d-flex justify-content-evenly bg-white pb-2 border-top border-1 border-dark rounded">
-            <div class="col-lg-6 col-md-6 col-xsm-10">
-                <p class="mt-2">
-                    ‌صحيح البخاري: كِتَابُ بَدْءِ الوَحْيِ (بَابٌ: كَيْفَ كَانَ بَدْءُ الوَحْيِ إِلَى رَسُولِ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ)
-                    حکم : أحاديث صحيح البخاريّ كلّها صحيحة
-
-                    ترجمة الباب: وَقَوْلِ اللَّهِ عَزَّوَجَلَّ ﴿إِنَّا أَوْحَيْنَا إِلَيْكَ كَمَا أَوْحَيْنَا إِلَى نُوحٍ وَالنَّبِيِّينَ مِنْ بَعْدِهِ﴾ [النساء: 163]
-                    1   حَدَّثَنَا الحُمَيْدِيُّ عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ، قَالَ: حَدَّثَنَا سُفْيَانُ، قَالَ: حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ الأَنْصَارِيُّ، قَالَ: أَخْبَرَنِي مُحَمَّدُ بْنُ إِبْرَاهِيمَ التَّيْمِيُّ، أَنَّهُ سَمِعَ عَلْقَمَةَ بْنَ وَقَّاصٍ اللَّيْثِيَّ، يَقُولُ: سَمِعْتُ عُمَرَ بْن....
-                </p>
+<div class="row mb-3 mt-3 justify-content-center ">
+    <div class="col-10">
+        <div class="row justify-content-center">
+    <div class="col-4">
+        <div class="col-sm-12 col-xs-12 d-none d-md-block d-sm-none d-lg-none mt-3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    دیگر ویب سائٹس
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li class="list-group-item list-group-item-dark"><a href="http://www.kitabosunnat.com" target="_blank" class="list-group-item-action text-decoration-none ">محدث لائبریری</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="http://www.urdufatwa.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث فتویٰ</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="http://forum.mohaddis.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث فورم</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="http://magazine.mohaddis.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث میگزین</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="https://mohaddismedia.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث میڈیا</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="https://quranonlinelibrary.com" target="blank" class="list-group-item-action text-decoration-none text-dark">قرآن لائبریری</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="https://rasailojaraid.com" target="blank" class="list-group-item-action text-decoration-none text-dark">رسائل و جرائد</a></li>
+                    <li class="list-group-item list-group-item-dark"><a href="https://shamilaurdu.com" target="blank" class="list-group-item-action text-decoration-none text-dark">شاملہ اردو</a></li>
+                </ul>
             </div>
-        <div class="col-lg-6 col-md-6 col-xsm-10" >
-           
-                <p class="mt-2">
-                    صحیح بخاری: کتاب: وحی کے بیان میں (باب: اس بارے میں کہ رسول اللہﷺ پر وحی کی ابتداء کیسے ہوئی)
-                    مترجم: ١. شیخ الحدیث حافظ عبد الستار حماد (دار السلام)
-
-                    ترجمۃ الباب:اور اللہ عزوجل کا یہ فرمان کہ ’’ہم نے بلاشبہ (اے محمدﷺ!) آپ کی طرف وحی کا نزول اسی طرح کیا ہے جس طرح حضرت نوحؑ اور ان کے بعد آنے والے تمام نبیوں کی طرف کیا تھا۔‘‘
-                   
-                    <br />1  حضرت علقمہ بن وقاص لیثی کہتے ہیں کہ میں نے حضرت عمر بن خطاب ؓ کو منبر پر یہ کہتے سنا کہ میں نے رسول اللہ ﷺ سے سنا، آپ فرما رہے تھے: ’’اعمال کا مدار نیتوں پر ہے اور ہر آدمی کو اس کی نیت ہی کے مطابق پھل ملے گا، پھر جس شخص نے دنیا کمانے یا کسی عورت سے شادی رچانے کے لیے وطن چھ
-                    <br />
-                    <div class=" position-relative pt-4">
-                        <a class="fw-bold fs-6 text-success position-absolute bottom-0  start-0" href="#">مزید تفصیل</a>
-                    </div>
-                </p>
         </div>
-         
-        </div>
+    </div>
+     <div class="col col-lg-4 col-md-4 col-sm-12 col-xsm-12 ">
        
     </div>
-
-    <div class="row mt-4 me-auto ms-auto">
-        <div class="col-md-10 offset-md-1 bg-white pb-4  ps-2 border-start border-4 border-dark rounded">
-            <h4 class="fw-bold ">نئی اپڈیٹس</h4>
+    <div class="col-4">
+                <div class="col-sm-12 col-xs-12 d-none d-md-block d-sm-none d-lg-none mt-3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    کتب احادیث
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li class="list-group-item list-group-item-dark" id="lstItemBukhari"><a href="/View/Sahi-Bukhari/1" class="list-group-item-action text-decoration-none ">‌صحيح البخاري</a></li>
+                    <li class="list-group-item list-group-item-dark" id="lstItemMuslim"><a href="/View/Muslim/1" class="list-group-item-action text-decoration-none ">صحيح مسلم</a></li>
+                    <li class="list-group-item list-group-item-dark" id="lstItemDaud"><a href="/View/Abu-Daud/1" class="list-group-item-action text-decoration-none ">سنن أبي داؤد</a></li>
+                            <li class="list-group-item list-group-item-dark" id="lstItemTrimdi"><a href="/View/Tarimdhi/1" class="list-group-item-action text-decoration-none ">جامع الترمذي</a></li>
+                    <li class="list-group-item list-group-item-dark" id="lstItemNisai"><a href="/View/Sunan-nasai/1" class="list-group-item-action text-decoration-none ">سنن النسائي</a></li>
+                            <li class="list-group-item list-group-item-dark" id="lstItemMajah"><a href="/View/ibn-majah/1" class="list-group-item-action text-decoration-none ">سنن ابن ماجه</a></li>
+                </ul>
+            </div>
         </div>
-    </div> 
+    </div>
+    </div>
+   </div>
+</div>
+@foreach(var obj in Model.GetDefaultHadith)
+{
+    <h2 class="text-center">آج کی حدیث</h2>
+    <h1 id="bookId" hidden>@obj.BookID</h1>
+    <h1 id="hadithNo" hidden>@obj.HadithNo</h1>
+    <h1 id="kitaabUrdu" hidden>@obj.kitaabNameUrdu</h1>
+    <h1 id="baabUrdu" hidden>@obj.BaabNameUrdu</h1>
+    <h1 id="HadithArabic" hidden>@obj.HadithArabicText</h1>
+    <div class="row justify-content-center mb-4" dir="rtl">
+        <div class="col-10 ">
+            <div class="row bg-light border-top border-4 border-dark rounded">
+                <div class="col-md-6 col-sm-10 mt-2">
+                    <span class="text-success">@obj.HadithBookName  :</span> <span class="text-danger arabic-font"> @obj.kitaabNameArabic</span> <span class="arabic-font"> ( : @obj.BaabNameArabic )</span> <br />
+                    <div class="d-flex flex-inline mt-2"><span class="text-success">حکم : </span> <p class="arabic-font" id="hukamm">@* @obj.HadithHukamAjmali *@ </p></div>
+                    @if (!string.IsNullOrEmpty(obj.TarjumatulBaabArabic))
+                    {
+                        <div class="d-flex flex-inline mt-2">
+                            <span class="text-success">ترجمة الباب</span>: <p class="arabic-font">@obj.TarjumatulBaabArabic</p>
+                        </div>
+                    }
+                    
+                    @*  <span class="text-success">ترجمة الباب :</span> <p class="">@obj.TarjumatulBaabArabic </p> *@
+                    <div class="d-flex flex-inline mt-2">
+                        <span class="text-danger">@obj.HadithNo</span>: <p class=" arabic-font">
+                            @{
+                                string arabicText = obj.HadithArabicText;
+                                int halfLength = arabicText.Length / 3;
+                                string firstHalf = arabicText.Substring(0, halfLength);
+                                string truncatedText = firstHalf + "...";
+                                @Html.Raw(truncatedText)
+                            }
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-10  mt-2">
+                    <div class="d-flex flex-inline">
+                        <span class="text-success">@obj.HadithBookNameUrdu:</span> <span class="text-danger" id="kitaabNameUrdu"></span>(<span id="BaabNameUrdu"></span>)</div>
+                    <div class="d-flex flex-inline">
+                        <span class="text-success">مترجم : </span> <p class="mutarajjum" id="mutarajam"> </p>
+                    </div>
+                    <div class=" d-flex flex-inline mt-2">
+                        <span class="text-success"> ترجمۃ الباب</span>:<p id="HadithTarjuma"></p>
+                    </div>
+                    @* <span class="text-success">ترجمۃ الباب: :</span> <p class="">@obj.TarjumatulBaabUrdu </p> <p class="text-center" dir="ltr" id="HadithTransUE"> @obj.HadithUrduText </p>*@
+                    <div class=" d-flex flex-inline mt-2">
+                    <span class="text-danger">@obj.HadithNo</span>:<div class="text-center" id="HadithTransUE"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        @* <a class="fw-bold fs-6 text-success" asp-controller="Home" asp-action="Detail" asp-route-Book="@obj.HadithBookNameEng" asp-route-id="@obj.HadeesNumber" method="post">مزید تفصیل</a> *@
+                        <form id="detailForm" asp-controller="Home" asp-action="GetDetail" method="post">
+                            <input type="hidden" id="bookId" name="bookId" value="@obj.BookID" />
+                            <input type="hidden" id="hadithNo" name="hadithNo" value="@obj.HadeesNumber" />
+                            <input type="hidden" id="bookName" name="bookName" value="@obj.HadithBookNameEng" />
+                            <button type="submit" class="fw-bold fs-6 text-success btn" style="border: none; background: none; padding: 0; cursor: pointer;">مزید تفصیل</button>
+                        </form>
 
-    <div class=" row mt-4  me-auto ms-auto">
-        <div class="col-md-10 offset-md-1 bg-white pb-4 ps-2 border-start border-4 border-dark rounded">
-            <h4 class="fw-bold ">نئی اپڈیٹس</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+
+ <div class="row justify-content-center mb-4" dir="rtl"">
+    <div class="col-md-10 pb-4 ps-2 bg-white border-start border-4 border-dark rounded">
+            <h4 class="fw-bold pt-2">نئی اپڈیٹس</h4>
         </div>
     </div>
 
-</div> *@
+<div class="row justify-content-center mb-5">
+    <div class="col-md-10   bg-white ">
+    <div id="carouselExampleIndicators" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div class="carousel-indicators position-absolute top-100 rounded-circle" >
+            @for (int i = 0; i < Model.Update.Count; i++)
+            {
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" class="@(i == 0 ? "active bg-success " : "")"  aria-current="true" aria-label="Slide @(i + 1)" style="width:15px; height:15px; border-radius:50%;"></button>
+            }
+        </div>
+        <div class="carousel-inner">
+        @foreach (var image in Model.Update)
+        {
+                <div class="carousel-item single-box @(image == Model.Update.First() ? "active" : "")">
+                    <img src="/image/Updates/@image.FileName" height="650" class=" w-100" alt="...">
+                </div>
+        }
+        </div>
+    </div>
+    </div>
+    </div>
 
+
+<div class="row mb-4 mt-2">
+@foreach (var obj in Model.analytics)
+{
+   
+<div class="col-md-3 mt-1">
+        <div class="visits-wrap">
+            <div class="visit-txt">
+                <p>آج کے وزیٹرز</p>
+                <p><span>@obj.TodayVisitors</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-1">
+        <div class="visits-wrap">
+            <div class="visit-txt">
+                <p>اس ہفتے کے وزیٹرز</p>
+                <p><span >@obj.ThisWeekVisitors</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-1">
+        <div class="visits-wrap">
+            <div class="visit-txt">
+                <p>اس ماہ کے وزیٹرز</p>
+                <p><span>@obj.ThisMonthVisitors</span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3 mt-1">
+        <div class="visits-wrap">
+            <div class="visit-txt">
+                <p>ٹوٹل وزیٹرز</p>
+                <p><span >@obj.TotalVisitors</span></p>
+            </div>
+        </div>
+    </div>
+}
+</div>
+<div class="article-padd-half rounded">
+        <div class="row justify-content-center shadow ">
+        <div class="col-md-7 bg-white">
+            <h3 class="text-center text-success mb-5 mt-2">نئی اپڈیٹس کے لیے سبسکرائب کریں</h3>
+            <div class="row mx-auto justify-content-center mb-5">
+                <div class=" col-md-8 ">
+                    <input type="text" class="form-control bg-light" placeholder="اپنا ای میل درج کریں..." aria-label="First name" style="border-radius: 45px;">
+                </div>
+                <div class=" col-md-4">
+                    <input type="submit" value="سبسکرائب کریں" class="rounded-pill text-white  btn btn-success " />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+       
 
 
 
 
 
 <!-- Modal -->
-<form id="myForm" method="post">
-    <div dir="rtl" class="modal fade right" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">ڈیفالٹ سیٹنگ منتخب کریں</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-3">التراقيم</div>
-                    <div class="col-3">
-                        التراجم
-                    </div>
-                    <div class="col-3">
-
-                        الحکم علی الحدیث
-                    </div>
-                </div>
-               
-                <div class="row">
-                    <div class="col-3 mt-4 form-group">صحیح بخاری</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SBTarqeem" name="BookName" name="Value" asp-items="ViewBag.SBTraqeemList" class="form-select">
-                            @* <option disabled selected>--Select Traqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SBTranslation" name="Value" asp-items="ViewBag.SBTranslateList" class="form-select">
-                            @* <option disabled selected>--Select Trajum--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SBHukam" name="Value" asp-items="ViewBag.SBHukamList" class="form-select">
-                            @* <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div> <div class="row">
-                        <div class="col-3 mt-4 form-group">صحيح مسلم</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SMTarqeem" asp-items="ViewBag.SMTraqeemList" class="form-select">
-                            @* <option disabled selected>--Select Tarqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SMTranslation" asp-items="ViewBag.SMTranslateList" class="form-select">
-                           @*  <option disabled selected>--Select Translation--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SMHukam" asp-items="ViewBag.SMHukamList" class="form-select">
-                          @*   <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div> <div class="row">
-                        <div class="col-3 mt-4 form-group">سنن أبي داؤد</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SADTarqeem" asp-items="ViewBag.SADTraqeemList" class="form-select">
-                           @*  <option disabled selected>--Select Tarqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SADTranslation" asp-items="ViewBag.SADTranslateList" class="form-select">
-                            @* <option disabled selected>--Select Translation--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SADHukam" asp-items="ViewBag.SADHukamList" class="form-select">
-                           @*  <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div> <div class="row">
-                        <div class="col-3 mt-4 form-group">جامع الترمذي</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="JTTarqeem" asp-items="ViewBag.JTTraqeemList" class="form-select">
-                            @* <option disabled selected>--Select Tarqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="JTTranslation" asp-items="ViewBag.JTTranslateList" class="form-select">
-                            @* <option disabled selected>--Select Translation--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="JTHukam" asp-items="ViewBag.JTHukamList" class="form-select">
-                           @*  <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div> <div class="row">
-                        <div class="col-3 mt-4 form-group">سنن النسائي</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SNTarqeem" asp-items="ViewBag.SNTraqeemList" class="form-select">
-                           @*  <option disabled selected>--Select Tarqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SNTranslation" asp-items="ViewBag.SNTranslateList" class="form-select">
-                           @*  <option disabled selected>--Select Translation--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SNHukam" asp-items="ViewBag.SNHukamList" class="form-select">
-                            @* <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div> <div class="row">
-                        <div class="col-3 mt-4 form-group">سنن ابن ماجه</div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SIMTarqeem" asp-items="ViewBag.SIMTraqeemList" class="form-select">
-                            @* <option disabled selected>--Select Tarqeem--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SIMTranslation" asp-items="ViewBag.SIMTranslateList" class="form-select">
-                          @*   <option disabled selected>--Select Translation--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                    <div class="col-3">
-                        <label></label>
-                            <select id="SIMHukam" asp-items="ViewBag.SIMHukamList" class="form-select">
-                           @*  <option disabled selected>--Select Hukam--</option> *@
-                        </select>
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div>
-               
-            </div>
-            <div class="modal-footer">
-
-                <button type="submit" class="btn btn-success">ڈیفالٹ سیٹنگ محفوظ کریں</button>
-            </div>
-        </div>
-    </div>
-</div>
- </form>
 
 
 @section scripts {
     @{
-        <partial name="_ValidationScriptsPartial"></partial>
+                <partial name="_ValidationScriptsPartial"></partial>
     }
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent the form from submitting
+    <script>    
 
-            // Example: Extract data from form fields
-            var formData = {
-                SahiBukhariTarqeem: document.getElementById('SBTarqeem').value,
-                SahiBukhariTranslation: document.getElementById('SBTranslation').value,
-                SahiBukhariHukam: document.getElementById('SBHukam').value,
-                SahiMuslimTarqeem: document.getElementById('SMTarqeem').value,
-                SahiMuslimTranslation: document.getElementById('SMTranslation').value,
-                SahiMuslimHukam: document.getElementById('SMHukam').value,
-                SananAbuDaodTarqeem: document.getElementById('SADTarqeem').value,
-                SananAbuDaodTranslation: document.getElementById('SADTranslation').value,
-                SananAbuDaodHukam: document.getElementById('SADHukam').value,
-                JamaTarmeiziTarqeem: document.getElementById('JTTarqeem').value,
-                JamaTarmeiziTranslation: document.getElementById('JTTranslation').value,
-                JamaTarmeiziHukam: document.getElementById('JTHukam').value,
-                SunanNisaiTarqeem: document.getElementById('SNTarqeem').value,
-                SunanNisaiTranslation: document.getElementById('SNTranslation').value,
-                SunanNisaiHukam: document.getElementById('SNHukam').value,
-                SunanIbeMajaTarqeem: document.getElementById('SIMTarqeem').value,
-                SunanIbeMajaTranslation: document.getElementById('SIMTranslation').value,
-                SunanIbeMajaHukam: document.getElementById('SIMHukam').value
-            };
+       
+        function getCookie(name) {
+            var cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return cookieValue ? cookieValue.pop() : '';
+           
+        }
 
-            // Loop through formData and set each field as a separate cookie
-            for (var key in formData) {
-                if (formData.hasOwnProperty(key)) {
-                    setCookie(key, formData[key]); // Set the cookie with a 100-year expiration
-                }
+        //End Script For Get Cookies
+
+
+
+        //Start Get Cookies for آج کی حدیث
+
+
+        $(document).ready(function () {
+            // Read the value of the "myCookie" cookie
+            
+            var bookID = document.getElementById('bookId').innerText;
+            var kitaabUrdu = document.getElementById('kitaabUrdu').innerText;
+            var baabUrdu = document.getElementById('baabUrdu').innerText;
+            console.log(bookID);
+            console.log(kitaabUrdu);
+            console.log(baabUrdu);
+            console.log(HadithArabic);
+
+            // Set Huakam and value based on bookID
+            if (bookID === '1') {
+                var value = getCookie('SahiBukhariTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SahiBukhariHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SahiBukhariTarjumaUrdu') || 'TarjumatulBaabUrdu';
+            } else if (bookID === '2') {
+                var value = getCookie('SahiMuslimTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SahiMuslimHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SahiMuslimTarjumaUrdu') || 'TarjumatulBaabUrdu';
+            } else if (bookID === '3') {
+                var value = getCookie('SananAbuDaodTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SananAbuDaodHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SananAbuDaodTarjumaUrdu') || 'TarjumatulBaabUrdu';
+            } else if (bookID === '4') {
+                var value = getCookie('JamaTarmeiziTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('JamaTarmeiziHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('JamaTarmeiziTarjumaUrdu') || 'TarjumatulBaabUrdu';
+            } else if (bookID === '5') {
+                var value = getCookie('SunanNisaiTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SunanNisaiHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SunanNisaiTarjumaUrdu') || 'TarjumatulBaabUrdu';
+            } else if (bookID === '6') {
+                var value = getCookie('SunanIbeMajaTranslation') || 'HadithUrduText';
+                var Huakam = getCookie('SunanIbeMajaHukam') || 'HadithHukamAjmali';
+                var Tarjuma = getCookie('SunanIbneMajaTarjumaUrdu') || 'TarjumatulBaabUrdu';
             }
 
-            // Optionally, you can redirect to another page after setting the cookies
-            //window.location.href = "https://localhost:44367/";
+            // Send an AJAX request to your server to get the corresponding "Name" based on the "Value" from the cookie
+            $.ajax({
+                url: '/Home/GetName',
+                type: 'GET',
+                data: { Translation: value,
+                    hukam: Huakam,
+                    BookId: bookID,
+                    KitaabUrdu: kitaabUrdu,
+                    BaabUrdu: baabUrdu,
+                    Tarjuma: Tarjuma
+                },
+                success: function (response) {
+                    // Display the "Name" in a <p> tag with the id "name"
+
+                    $("#mutarajam").text(response.name);
+
+                    $("#hukamm").text(response.bookId[camelCase(response.hukam)]);
+
+                    // Assuming response.bookId[camelCase(response.translation)] contains the full content
+                    var fullContent = response.bookId[camelCase(response.translation)];
+                    var halfLength = Math.ceil(fullContent.length / 3); // Get the length of half of the content
+                    var halfContent = fullContent.substring(0, halfLength); // Get the first half of the content
+                    var truncatedContent = halfContent + '...'; // Add dots at the end
+
+                    // Display the truncated content
+                    $("#HadithTransUE").html(truncatedContent);
+
+
+
+                    $("#HadithTarjuma").html(response.bookId[camelCase(response.tarjuma)]);
+
+                    $("#kitaabNameUrdu").html(response.kitaabUrdu);
+
+                    $("#BaabNameUrdu").html(response.baabUrdu);
+
+                    console.log(specificValue);
+                },
+                error: function () {
+                    // Handle errors
+                }
+            });
         });
 
-        function setCookie(name, value) {
-            var expirationDate = new Date();
-            expirationDate.setFullYear(expirationDate.getFullYear() + 100); // Expires in 100 years
-            var expires = "expires=" + expirationDate.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-            console.log(expires);
+       
+
+        function camelCase(str) {
+            // Using replace method with regEx
+            return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+                return index == 0 ? word.toLowerCase() : word.toUpperCase();
+            }).replace(/\s+/g, '');
         }
+
+
+        //Crousel Indicatore
+        var carousel = document.getElementById('carouselExampleIndicators');
+        var indicators = carousel.querySelectorAll('.carousel-indicators button');
+
+        carousel.addEventListener('slid.bs.carousel', function (event) {
+            var activeIndex = event.to;
+            indicators.forEach(function (indicator, index) {
+                if (index === activeIndex) {
+                    indicator.classList.add('bg-success');
+                    indicator.classList.add('active');
+                    
+                } else {
+                    indicator.classList.remove('bg-success');
+                    indicator.classList.remove('active');
+                }
+            });
+        });
 
 
 

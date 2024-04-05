@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Muhaddis.Models.Models;
 using System;
 using System.Collections.Generic;
@@ -11,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace Muhaddis.DataAccess.Data
 {
-    public class ApplicationDbContext : IApplicationDbContext
+    public class BookConfigDbContext 
     {
         public string Constr {get; set;}
         public IConfiguration _configuration;
         public SqlConnection con;
 
-        public ApplicationDbContext(IConfiguration configuration)
+        public BookConfigDbContext(IConfiguration configuration)
         {
             _configuration = configuration;
             Constr = _configuration.GetConnectionString("DefaultConnection");
@@ -66,9 +65,5 @@ namespace Muhaddis.DataAccess.Data
     }
 
 
-    public interface IApplicationDbContext
-    {
-        public List<BooksConfig> GetBookConfig();
-    }
 
 }

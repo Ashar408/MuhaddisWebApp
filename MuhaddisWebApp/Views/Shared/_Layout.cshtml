@@ -1,28 +1,32 @@
-﻿@using Muhaddis.Models;
+﻿@* @model Muhaddis.Models.Models.ViewModels.HomeVM; *@
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MuhaddisWebApp</title>
+    <title>@ViewData["Title"]</title>
    @*  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
 
    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MuhaddisWebApp.styles.css" asp-append-version="true" />
 </head>
-<body class="m-0">
-    <header id="headerBanner" class="border-bottom border-success border-4">
+<body class="urdu-font" style="background-color:#dbe3f1">
+    <header id="headerBanner" class="border-bottom border-success border-4 ">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom border-success border-4 box-shadow">
-                <div class="container-fluid ">
-                @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">محدث</a> *@
+            <div class="container " dir="rtl">
+                <a class="navbar-brand mx-auto d-sm-block d-md-none d-lg-none" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/image/logo.png" class="img-fluid" width="65" height="65"/>
+                 </a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
+                   
                 </button>
-                <div class="navbar-collapse collapse ">
+                <div class="navbar-collapse collapse" dir="ltr">
                     <ul class="navbar-nav mx-auto ">
                         <li class="nav-item">
                             <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">رابطہ کریں</a>
@@ -40,34 +44,1073 @@
                             <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">خصوصیات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Privacy">صفحہ اول</a>
+                            <a class="nav-link text-light fw-bold fs-6" asp-area="" asp-controller="Home" asp-action="Index">صفحہ اول</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="position-relative">
-                <img data-bs-toggle="modal" data-bs-target="#staticBackdrop" cursor: src="./image/settingimg.png" height="50px" width="50px" class="position-absolute top-0 start-0 ms-1" title="ڈیفالٹ سیٹنگ" style="margin-top:-25px; cursor:pointer;" />
+            <div class="" style="right:0; position:fixed; top:28px; z-index:10; margin:0;">
+                <img data-bs-toggle="modal" data-bs-target="#staticBackdrop" cursor: src="~/image/settingimg.png" height="50px" width="50px" class=" ms-1" title="ڈیفالٹ سیٹنگ" style="margin-top:-25px; cursor:pointer;" />
             </div>
         </nav>
-        <div class="text-center">
-            <img class="img-fluid" src="./image/banner1.png"/>
-        </div>
+      
+        
+            <div class="row m-0 p-0">
+                <div class="col-12 m-0 p-0">
+                <div class="row m-0 p-0">
+                    <div class="col-lg-2 col-md-2 d-none d-lg-block text-center m-0 p-0" style="width:110px;">
+
+                        <ul class="list-unstyled bg-secondary rounded-2 mt-1 m-0 p-0 " style="height:299px;">
+                            <li class="pt-3"><a href="http://www.kitabosunnat.com" target="_blank" class=" text-decoration-none text-white">محدث لائبریری</a></li>
+                            <li class="pt-3"><a href="http://www.urdufatwa.com" target="blank" class=" text-decoration-none text-white">محدث فتویٰ</a></li>
+                            <li class="pt-3"><a href="http://forum.mohaddis.com" target="blank" class=" text-decoration-none text-white">محدث فورم</a></li>
+                            <li class="pt-2"><a href="http://magazine.mohaddis.com" target="blank" class=" text-decoration-none text-white">محدث میگزین</a></li>
+                            <li class="pt-2"><a href="https://mohaddismedia.com" target="blank" class=" text-decoration-none text-white">محدث میڈیا</a></li>
+                            <li class="pt-2"><a href="https://quranonlinelibrary.com" target="blank" class=" text-decoration-none text-white">قرآن لائبریری</a></li>
+                            <li  class="pt-2"><a href="https://rasailojaraid.com" target="blank" class=" text-decoration-none text-white">رسائل و جرائد</a></li>
+                            <li class="pt-2"><a href="https://shamilaurdu.com" target="blank" class=" text-decoration-none text-white">شاملہ اردو</a></li>
+                    </ul>
+                </div>
+
+                    <div class="col-md-12 col-lg-9 justify-content-md-between mx-md-auto">
+                        <img class="img-fluid  d-none d-sm-none d-md-block d-lg-block " src="~/image/banner-img.png"/>
+                <div class="search-wrap search-wrap-home ">
+                    <div class="rowform home-row-form">
+                <div class="row">
+                    <div class="col-5 col-md-2">
+                        <div class="form-group">
+                            <select name="ctl00$ddlLanguage" id="ddlLanguage" class="form-control lang-drop first-wrap">
+                                <option value="1">اردو</option>
+                                <option value="2">عربی</option>
+                                <option value="3">English</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-4">
+                        <div class="form-group">
+                            <select name="ctl00$ddlSearchedItem" id="ddlSearchedItem" class="form-control lang-drop">
+                                <option value="2">احادیث میں تلاش کریں</option>
+                                <option value="3">کتب میں تلاش کریں</option>
+                                <option value="4">ابواب میں تلاش کریں</option>
+                                <option value="1">موضوعات میں تلاش کریں</option>
+
+                            </select>
+                            <select name="ctl00$ddlSearchedItemArabic" id="ddlSearchedItemArabic" class="form-control lang-drop arabic-font" style="display: none">
+                                <option value="2">البحث في الأحاديث</option>
+                                <option value="3">البحث في الكتب</option>
+                                <option value="4">البحث في الأبواب</option>
+                                <option value="1">البحث في المواضيع</option>
+
+                            </select>
+                            <select name="ctl00$ddlSearchedItemEnglish" id="ddlSearchedItemEnglish" class="form-control lang-drop eng-font" style="display: none">
+                                <option value="2">Search In Ahadith</option>
+                                <option value="3">Search In Books</option>
+                                <option value="4">Search In Abwaabs</option>
+                                <option value="1">Search In Topics</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group keyboard-wrap">
+                            <input name="ctl00$txtSearchedText" type="text" id="txtSearchedText" class="form-control KBInputU" placeholder=" ٹائپ کریں... " />
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <input type="submit" name="ctl00$imgSearchText" value="تلاش کریں" id="imgSearchText" class="btnSearch" />
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            </div>
+                        <div class="row justify-content-center">
+                            <div class="col-4 p-0 m-0">
+                                <div class="col-sm-12 col-xs-12  ms-3 d-md-none d-sm-block d-lg-none">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            دیگر ویب سائٹس
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li class="list-group-item list-group-item-dark"><a href="http://www.kitabosunnat.com" target="_blank" class="list-group-item-action text-decoration-none ">محدث لائبریری</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="http://www.urdufatwa.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث فتویٰ</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="http://forum.mohaddis.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث فورم</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="http://magazine.mohaddis.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث میگزین</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="https://mohaddismedia.com" target="blank" class="list-group-item-action text-decoration-none text-dark">محدث میڈیا</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="https://quranonlinelibrary.com" target="blank" class="list-group-item-action text-decoration-none text-dark">قرآن لائبریری</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="https://rasailojaraid.com" target="blank" class="list-group-item-action text-decoration-none text-dark">رسائل و جرائد</a></li>
+                                            <li class="list-group-item list-group-item-dark"><a href="https://shamilaurdu.com" target="blank" class="list-group-item-action text-decoration-none text-dark">شاملہ اردو</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4 p-0 m-0">
+                                <div class="col-sm-12 col-xs-12 me-3 d-md-none d-sm-block d-sm-block">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            کتب احادیث
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemBukhari"><a href="/View/Sahi-Bukhari/1" class="list-group-item-action text-decoration-none ">‌صحيح البخاري</a></li>
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemMuslim"><a href="/View/Muslim/1" class="list-group-item-action text-decoration-none ">صحيح مسلم</a></li>
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemDaud"><a href="/View/Abu-Daud/1" class="list-group-item-action text-decoration-none ">سنن أبي داؤد</a></li>
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemTrimdi"><a href="/View/Tarimdhi/1" class="list-group-item-action text-decoration-none ">جامع الترمذي</a></li>
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemNisai"><a href="/View/Sunan-nasai/1" class="list-group-item-action text-decoration-none ">سنن النسائي</a></li>
+                                            <li class="list-group-item list-group-item-dark list" id="lstItemMajah"><a href="/View/ibn-majah/1" class="list-group-item-action text-decoration-none ">سنن ابن ماجه</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+
+
+                 <div class="col-lg-2 col-md-2 d-none d-lg-block m-0 p-0 mt-4" style="width:110px;">
+
+                        <ul class="list-unstyled bg-secondary rounded-2 text-center m-0 p-0">
+                              <li class="mt-3 pt-2 list" id="lstItemBukhari"><a href="/View/Sahi-Bukhari/1" class=" text-decoration-none text-white">‌صحيح البخاري</a></li>
+                            <li class="mt-2 list" id="lstItemMuslim"><a href="/View/Muslim/1" class=" text-decoration-none text-white">صحيح مسلم</a></li>
+                            <li class="mt-2 list" id="lstItemDaud"><a href="/View/Abu-Daud/1" class=" text-decoration-none text-white">سنن أبي داؤد</a></li>
+                            <li class="mt-2 list" id="lstItemTrimdi"><a href="/View/Tarimdhi/1" class=" text-decoration-none text-white">جامع الترمذي</a></li>
+                            <li class="mt-2 list" id="lstItemNisai"><a href="/View/Sunan-nasai/1" class=" text-decoration-none text-white">سنن النسائي</a></li>
+                            <li class="mt-2 pb-2 list" id="lstItemMajah"><a href="/View/ibn-majah/1" class=" text-decoration-none text-white">سنن ابن ماجه</a></li>
+                         </ul>        
+                </div>
+           
+               
+             </div>
+         </div>
+         
+      </div>
+ 
+ 
+
     </header>
-    <div class="container-fluid ps-0 pe-0">
+
+
+
+    <div class="container-fluid">
         <main role="main" class="">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted mt-4 bg-white">
-        <div class="container-fluid">
-            &copy; 2024 - MuhaddisWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer class="bg-white d-flex flex-column flex-end">
+        <article class="article-padd-half">
+            <div dir="rtl" class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer-col">
+                            <div class="footer-heading">
+                                <h4 class="standard-footer-heading">
+                                    رابطہ کریں
+                                </h4>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="footer-details">
+                                        <ul class="footer-list">
+                                            <li>
+                                                مرکز النور: کالج روڈ، نزد غازی چوک، ٹاؤن شپ، لاہور ۔ پاکستان
+                                            </li>
+
+                                            <li class="mt-2">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d435529.85370593023!2d74.194898!3d31.4808208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919013db575044b%3A0xf63b845f3af35ff9!2sAl%20Noor%20Masjid!5e0!3m2!1sen!2s!4v1702978604542!5m2!1sen!2s" style="width: 100%;height: 200px;border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="footer-details">
+                                        <ul class="footer-list list-unstyled">
+                                            <li class=" text-decoration-none">
+                                                <a href="tel:+923000197274" class="footer-link">
+                                                    0092-300-0197274
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="mailto:contact@mohaddis.com" class="footer-link">
+                                                    contact@mohaddis.com
+                                                </a>
+                                            </li>
+                                            <li class="d-flex footer-social-icons">
+                                                <a target="_blank" href="https://www.facebook.com/MohaddisMedia"><span class="fa-brands fa-facebook"></span></a>
+                                                <a target="_blank" href="https://www.youtube.com/MohaddisMedia"><span class="fa-brands fa-youtube"></span></a>
+                                                <a target="_blank" href="https://twitter.com/MohaddisMedia"><span class="fa-brands fa-twitter"></span></a>
+                                                <a target="_blank" href="https://www.instagram.com/mohaddismedia"><span class="fa-brands fa-instagram"></span></a>
+                                                <a target="_blank" href="https://www.pinterest.com/MohaddisMedia"><span class="fa-brands fa-pinterest"></span></a>
+                                                <a target="_blank" href="https://www.tiktok.com/mohaddismedia"><span class="fa-brands fa-tiktok"></span></a>
+                                                <a target="_blank" href="https://wa.me/00923000197274"><span class="fa-brands fa-whatsapp"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer-col">
+                            <div class="footer-heading">
+                                <h4 class="standard-footer-heading">
+                                    ہمارے دیگر پراجیکٹ
+                                </h4>
+                            </div>
+                            <div class="footer-details">
+                                <ul class="footer-list project-list">
+
+                                    <li>
+                                        <a href="https://mohaddismedia.com" target="_blank" class="footer-link">
+                                            محدث سٹوڈیو
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.kitabosunnat.com" target="_blank" class="footer-link">
+                                            محدث لائبریری
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="http://www.urdufatwa.com" target="_blank" class="footer-link">
+                                            محدث  فتویٰ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://forum.mohaddis.com" target="_blank" class="footer-link">
+                                            محدث فورم
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://magazine.mohaddis.com" target="_blank" class="footer-link">
+                                            محدث میگزین
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rasailojaraid.com" target="_blank" class="footer-link">
+                                            محدث  رسائل وجرائد
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://quranonlinelibrary.com" target="_blank" class="footer-link">
+                                            محدث  قرآن لائبریری
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://shamilaurdu.com" target="_blank" class="footer-link">
+                                            مکتبہ شاملہ اردو
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </footer>
+
+
+    <form id="myForm" method="post">
+        <div dir="rtl" class="modal fade right" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">ڈیفالٹ سیٹنگ منتخب کریں</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-3">التراقيم</div>
+                            <div class="col-3">
+                                التراجم
+                            </div>
+                            <div class="col-3">
+
+                                الحکم علی الحدیث
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3 mt-4 form-group">صحیح بخاری</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SBTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.SBTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SBTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.SBTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SBHukam" class="form-select">
+                                    @foreach (var item in ViewBag.SBHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div> <div class="row">
+                            <div class="col-3 mt-4 form-group">صحيح مسلم</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SMTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.SMTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SMTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.SMTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SMHukam" class="form-select">
+                                    @foreach (var item in ViewBag.SMHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div> <div class="row">
+                            <div class="col-3 mt-4 form-group">سنن أبي داؤد</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SADTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.SADTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SADTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.SADTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SADHukam" class="form-select">
+                                    @foreach (var item in ViewBag.SADHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div> <div class="row">
+                            <div class="col-3 mt-4 form-group">جامع الترمذي</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="JTTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.JTTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="JTTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.JTTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="JTHukam" class="form-select">
+                                    @foreach (var item in ViewBag.JTHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div> <div class="row">
+                            <div class="col-3 mt-4 form-group">سنن النسائي</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SNTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.SNTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SNTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.SNTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SNHukam" class="form-select">
+                                    @foreach (var item in ViewBag.SNHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div> <div class="row">
+                            <div class="col-3 mt-4 form-group">سنن ابن ماجه</div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SIMTarqeem" class="form-select">
+                                    @foreach (var item in ViewBag.SIMTraqeemList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SIMTranslation" class="form-select">
+                                    @foreach (var item in ViewBag.SIMTranslateList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                            <div class="col-3">
+                                <label></label>
+                                <select id="SIMHukam" class="form-select">
+                                    @foreach (var item in ViewBag.SIMHukamList)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span class="text-danger"></span>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-success">ڈیفالٹ سیٹنگ محفوظ کریں</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        //Script for Set Cookies In Browser
+
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Example: Extract data from form fields
+            var formData = {
+                SahiBukhariTarqeem: document.getElementById('SBTarqeem').value,
+                SahiBukhariTranslation: document.getElementById('SBTranslation').value,
+                SahiBukhariHukam: document.getElementById('SBHukam').value,
+                SahiMuslimTarqeem: document.getElementById('SMTarqeem').value,
+                SahiMuslimTranslation: document.getElementById('SMTranslation').value,
+                SahiMuslimHukam: document.getElementById('SMHukam').value,
+                SananAbuDaodTarqeem: document.getElementById('SADTarqeem').value,
+                SananAbuDaodTranslation: document.getElementById('SADTranslation').value,
+                SananAbuDaodHukam: document.getElementById('SADHukam').value,
+                JamaTarmeiziTarqeem: document.getElementById('JTTarqeem').value,
+                JamaTarmeiziTranslation: document.getElementById('JTTranslation').value,
+                JamaTarmeiziHukam: document.getElementById('JTHukam').value,
+                SunanNisaiTarqeem: document.getElementById('SNTarqeem').value,
+                SunanNisaiTranslation: document.getElementById('SNTranslation').value,
+                SunanNisaiHukam: document.getElementById('SNHukam').value,
+                SunanIbeMajaTarqeem: document.getElementById('SIMTarqeem').value,
+                SunanIbeMajaTranslation: document.getElementById('SIMTranslation').value,
+                SunanIbeMajaHukam: document.getElementById('SIMHukam').value
+
+            };
+
+
+            // Loop through formData and set each field as a separate cookie
+            for (var key in formData) {
+                if (formData.hasOwnProperty(key)) {
+                    setCookie(key, formData[key]); // Set the cookie with a 100-year expiration
+                }
+            }
+
+
+            // Check if SahiBukhariTranslation is equal to HadithUrduText
+            if (document.getElementById('SBTranslation').value === 'HadithUrduText') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaText
+                setCookie('SahiBukhariHashiya', 'HadithHashiaText');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrdu');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextOne') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaText
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextOne');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduOne');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextTwo') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaText
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextTwo');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextThree') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaText
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextThree');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextFour') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaTextFour
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextFour');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextFive') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaTextFive
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextFive');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextSix') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaSix
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextSix');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextSeven') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaSeven
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextSeven');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextEight') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaEight
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextEight');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextNine') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaNine
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextNine');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if SahiBukhariTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('SBTranslation').value === 'HadithUrduTextTen') {
+                // Set SahiBukhariHashiya cookie to HadithHashiaTen
+                setCookie('SahiBukhariHashiya', 'HadithHashiaTextTen');
+                setCookie('SahiBukhariTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+
+
+
+            // Check if SahiMuslimTranslation is equal to HadithUrduText
+            if (document.getElementById('SMTranslation').value === 'HadithUrduText') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaText
+                setCookie('SahiMuslimHashiya', 'HadithHashiaText');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrdu');
+                
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextOne') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaText
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextOne');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduOne');
+                
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextTwo') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaText
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextTwo');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextThree') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaText
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextThree');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextFour') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaTextFour
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextFour');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextFive') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaTextFive
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextFive');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextSix') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaSix
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextSix');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextSeven') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaSeven
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextSeven');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextEight') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaEight
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextEight');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextNine') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaNine
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextNine');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if SahiMuslimTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('SMTranslation').value === 'HadithUrduTextTen') {
+                // Set SahiMuslimHashiya cookie to HadithHashiaTen
+                setCookie('SahiMuslimHashiya', 'HadithHashiaTextTen');
+                setCookie('SahiMuslimTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+
+
+
+            // Check if SananAbuDaodTranslation is equal to HadithUrduText
+            if (document.getElementById('SADTranslation').value === 'HadithUrduText') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaText
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaText');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrdu');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextOne') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaText
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextOne');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduOne');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextTwo') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaText
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextTwo');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextThree') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaText
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextThree');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextFour') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaTextFour
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextFour');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextFive') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaTextFive
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextFive');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextSix') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaSix
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextSix');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextSeven') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaSeven
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextSeven');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextEight') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaEight
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextEight');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextNine') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaNine
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextNine');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if SananAbuDaodTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('SADTranslation').value === 'HadithUrduTextTen') {
+                // Set SananAbuDaodHashiya cookie to HadithHashiaTen
+                setCookie('SananAbuDaodHashiya', 'HadithHashiaTextTen');
+                setCookie('SananAbuDaodTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+            
+            
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduText
+            if (document.getElementById('JTTranslation').value === 'HadithUrduText') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaText
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaText');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrdu');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextOne') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaText
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextOne');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduOne');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextTwo') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaText
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextTwo');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextThree') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaText
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextThree');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextFour') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaTextFour
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextFour');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextFive') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaTextFive
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextFive');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextSix') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaSix
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextSix');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextSeven') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaSeven
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextSeven');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextEight') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaEight
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextEight');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextNine') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaNine
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextNine');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if JamaTarmeiziTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('JTTranslation').value === 'HadithUrduTextTen') {
+                // Set JamaTarmeiziHashiya cookie to HadithHashiaTen
+                setCookie('JamaTarmeiziHashiya', 'HadithHashiaTextTen');
+                setCookie('JamaTarmeiziTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+
+
+
+            // Check if SunanNisaiTranslation is equal to HadithUrduText
+            if (document.getElementById('SNTranslation').value === 'HadithUrduText') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaText
+                setCookie('SunanNisaiHashiya', 'HadithHashiaText');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrdu');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextOne') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaText
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextOne');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduOne');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextTwo') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaText
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextTwo');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextThree') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaText
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextThree');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextFour') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaTextFour
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextFour');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextFive') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaTextFive
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextFive');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextSix') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaSix
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextSix');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextSeven') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaSeven
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextSeven');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextEight') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaEight
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextEight');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextNine') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaNine
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextNine');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if SunanNisaiTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('SNTranslation').value === 'HadithUrduTextTen') {
+                // Set SunanNisaiHashiya cookie to HadithHashiaTen
+                setCookie('SunanNisaiHashiya', 'HadithHashiaTextTen');
+                setCookie('SunanNisaiTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+            
+            
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduText
+            if (document.getElementById('SIMTranslation').value === 'HadithUrduText') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaText
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaText');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrdu');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextOne
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextOne') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaText
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextOne');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduOne');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextTwo
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextTwo') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaText
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextTwo');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduTwo');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextThree
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextThree') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaText
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextThree');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduThree');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextFour
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextFour') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaTextFour
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextFour');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduFour');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextFive
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextFive') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaTextFive
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextFive');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduFive');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextSix
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextSix') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaSix
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextSix');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduSix');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextSeven
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextSeven') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaSeven
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextSeven');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduSeven');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextEight
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextEight') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaEight
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextEight');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduEight');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextNine
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextNine') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaNine
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextNine');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduNine');
+
+            }
+            // Check if SunanIbneMajaTranslation is equal to HadithUrduTextTen
+            else if (document.getElementById('SIMTranslation').value === 'HadithUrduTextTen') {
+                // Set SunanIbneMajaHashiya cookie to HadithHashiaTen
+                setCookie('SunanIbneMajaHashiya', 'HadithHashiaTextTen');
+                setCookie('SunanIbneMajaTarjumaUrdu', 'TarjumatulBaabUrduTen');
+
+            }
+
+
+
+
+
+
+
+
+            // Optionally, you can redirect to another page after setting the cookies
+            window.location.href = "https://localhost:44367/";
+        });
+
+        function setCookie(name, value) {
+            var expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 100); // Expires in 100 years
+            var expires = "expires=" + expirationDate.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            //console.log(expires);
+        }
+        //End Script For Set Cookies
+    </script>
+
 </body>
 </html>
